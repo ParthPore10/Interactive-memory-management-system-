@@ -33,6 +33,3 @@ Small C++ console simulator that visualizes paging and heap allocation strategie
 - Heaps are rebuilt on each request to pick best/worst free blocks quickly.
 - Frames are derived from `start` offsets divided by `FRAME_SIZE`; constants live at the top of `main.cpp` for quick tuning.
 
-## Related Files
-- `main.cpp` — core simulator and UI.
-- `visulizer.cpp` / `imms_vis` — alternate visualization build (if present in your setup).
