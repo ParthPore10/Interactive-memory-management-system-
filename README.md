@@ -33,3 +33,13 @@ Small C++ console simulator that visualizes paging and heap allocation strategie
 - Heaps are rebuilt on each request to pick best/worst free blocks quickly.
 - Frames are derived from `start` offsets divided by `FRAME_SIZE`; constants live at the top of `main.cpp` for quick tuning.
 
+## Test Cases
+| Test Case | Expected Outcome |
+| --- | --- |
+| Allocate 10 units using First Fit | _first adequate block is selected_ |
+| Allocate using Best Fit on multiple free holes | _smallest adequate block is selected_ |
+| Allocate pages for process1 | _Frame allocation and page table update_ |
+| Request size larger than any free block | _display no suitable block_ |
+| Page Table Overflow | _display page table full_ |
+| Deallocate invalid/terminated process | _display invalid PID_ |
+| Difference in Best/Worst fit in highly fragmented memory | _Best Fit should trigger less of page faults_ |
